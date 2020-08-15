@@ -8,7 +8,6 @@ from . import views
 
 
 class CashOnDeliveryDashboardApplication(OscarDashboardConfig):
-    name = None
     default_permissions = ['is_staff', ]
 
     list_view = views.TransactionListView
@@ -28,6 +27,3 @@ class CashOnDeliveryDashboardApplication(OscarDashboardConfig):
             urlpatterns = patterns('', *urlpatterns)
 
         return self.post_process_urls(urlpatterns)
-
-
-application = CashOnDeliveryDashboardApplication()
