@@ -2,12 +2,12 @@ import django
 from django.conf.urls import url
 from django.contrib.admin.views.decorators import staff_member_required
 
-from oscar.core.application import Application
+from oscar.core.application import OscarDashboardConfig
 
 from . import views
 
 
-class CashOnDeliveryDashboardApplication(Application):
+class CashOnDeliveryDashboardApplication(OscarDashboardConfig):
     name = None
     default_permissions = ['is_staff', ]
 
